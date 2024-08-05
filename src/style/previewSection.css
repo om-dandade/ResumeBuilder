@@ -1,0 +1,12 @@
+.previewSection{
+    flex: 7;
+    background-color: greenyellow;
+}
+
+.resume{
+    background-color: aqua;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 300px;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.393);
+}
