@@ -1,12 +1,7 @@
 export {ColapcableSection}
 import { useState } from "react";
 
-const infoSections = {
-    "personalInfo": <PersonalInfoForm />,
-};
-
-
-function ColapcableSection({sectionName}){
+function ColapcableSection({sectionName, sectionData}){
     const [isCollapsed, setIsCollapsed] = useState(true);
     const toggleCollapse = () =>{
         setIsCollapsed(!isCollapsed);
@@ -15,21 +10,22 @@ function ColapcableSection({sectionName}){
         <div>
             {sectionName}
             <button onClick={toggleCollapse}>{isCollapsed? "expand": "collapse"}</button>
-            {!isCollapsed && infoSections[sectionName]}
+            {!isCollapsed && getSectionComponent(sectionName, sectionData)}
         </div>
     )
 }
+function getSectionComponent(sectionName, sectionData){
+    switch(sectionName){
+        case "personal": return <PersonalInfoForm sectionData={sectionData} />
+    }
 
-function PersonalInfoForm(){
-    const [name, setName] = useState("Om Dandade");
-    const updateName = (event) =>{
-    setName(event.target.value);
-
-    console.log(name);
+    return null;
 }
+
+function PersonalInfoForm({sectionData}){
     return(
         <div>
-            name <input value={name} onChange={(event) => updateName(event)}/>
+            name <input value={sectionData.name.value} onChange={(event) => sectionData.name.setter(event.target.value)}/>
         </div>
     )
 }

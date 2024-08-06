@@ -1,0 +1,9 @@
+App -
+	Home Page
+
+	Builder Pag
+		- details section
+			-tool bar
+			-forms
+		- preview section
+			-resume

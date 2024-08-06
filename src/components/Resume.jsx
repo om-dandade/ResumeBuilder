@@ -1,8 +1,9 @@
 
-export default function Resume(){
+export default function Resume({data}){
     return(
         <div className="resume">
-            <h1>Resume</h1>
+            <h1>{data.personal.name.value}</h1>
+            <a>{data.personal.gender.value}</a>
         </div>
     )
 }
