@@ -4,7 +4,9 @@ import Resume from './Resume'
 export default function PreviewSection({data}){
     return(
         <div className="previewSection">
-            <h1>PreviewSection</h1>
+            <div className='centeredText'>
+                <h1>Resume Builder</h1>
+            </div>
             <Resume data={data}/>
         </div>
     )

@@ -1,12 +1,12 @@
 .detailsSection{
     flex: 3;
-    background-color: red;
+    background-color: #939185;
 }
 
 .tooBar{
     display: flex;
     justify-content: center;
-    background-color: grey;
+    background-color: #2F3645;
     height: 8vh;
 }
 

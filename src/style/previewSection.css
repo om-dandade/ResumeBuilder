@@ -1,12 +1,27 @@
 .previewSection{
     flex: 7;
-    background-color: greenyellow;
+    background-color: #F8EDE3;
 }
 
 .resume{
-    background-color: aqua;
+    background-color: white;
     margin-left: 5vw;
     margin-right: 5vw;
     height: 300px;
     box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.393);
+    padding: 1vw;
+}
+
+.resumeTitle{
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.contentText{
+    font-size: small;
+}
+
+.separator {
+    border-top: 1px solid #000;
+    margin: 10px 0; 
 }

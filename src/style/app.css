@@ -1,5 +1,13 @@
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .app{
   display: flex;
   height: 100vh;
   background-color: magenta;
+}
+
+.centeredText{
+  text-align: center;
 }
