@@ -19,9 +19,10 @@ function ColapcableSection({sectionName, sectionData}){
 //switch case to get the correct form from below based on sectionName
 function getSectionComponent(sectionName, sectionData){
     switch(sectionName){
-        case "personal": return <PersonalInfoForm sectionData={sectionData} />
-        case "contact": return <ContactForm sectionData={sectionData} />
-        case "summary": return <SummaryForm sectionData={sectionData} />
+        case "personal": return <PersonalInfoForm sectionData={sectionData} />;
+        case "contact": return <ContactForm sectionData={sectionData} />;
+        case "summary": return <SummaryForm sectionData={sectionData} />;
+        case "skills": return <SKillsForm sectionData={sectionData} />;
     }
 
     return null;
@@ -51,6 +52,14 @@ function SummaryForm({sectionData}){
     return(
         <div>
             Profile Summary <input value={sectionData.value} onChange={(event) => sectionData.setter(event.target.value)}/>
+        </div>
+    )
+}
+
+function SKillsForm({sectionData}){
+    return(
+        <div>
+            Sills <input value={sectionData.value} onChange={(event) => sectionData.setter(event.target.value)}/>
         </div>
     )
 }

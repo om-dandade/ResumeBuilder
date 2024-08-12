@@ -1,6 +1,6 @@
 
 export default function Resume({data}){
-    const {personal, contact, summary} = data;
+    const {personal, contact, summary, skills} = data;
     return(
         <div className="resume">
             <div className="centeredText">
@@ -15,7 +15,9 @@ export default function Resume({data}){
 
                 <div className="separator"></div>
 
-                
+                {/* Skills */}
+                <h3>Skills</h3>
+                <pre className="contentText">{skills.value}</pre>
             </div>
         </div>
     )
