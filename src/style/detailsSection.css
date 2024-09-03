@@ -1,6 +1,8 @@
 .detailsSection{
     flex: 3;
     background-color: #939185;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .tooBar{
@@ -13,3 +15,4 @@
 .tool{
     margin: auto;
 }
+    

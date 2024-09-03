@@ -1,14 +1,14 @@
 import '../style/detailsSection.css'
 import ToolBar from './ToolBar'
-import { ColapcableSection } from './InfoSections'
+import  CollapsibleForm from './CollapsibleForm'
 
-export default function DetailsSection({data}){
+export default function DetailsSection({data, refs}){
 
     return(
         <div className="detailsSection">
             <ToolBar />
             {Object.keys(data).map((sectionName) => {
-                return <ColapcableSection key={sectionName} sectionName={sectionName} sectionData={data[sectionName]} />
+                return <CollapsibleForm key={sectionName} sectionName={sectionName} sectionData={data[sectionName]} sectionRef={refs[sectionName]}/>
             })}
         </div>
     )
