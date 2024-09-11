@@ -14,8 +14,8 @@ export default function ColapcableForm({sectionName, sectionData, sectionRef}){
 
     return(
         <>
-            <div onClick={toggleCollapse}>
-                <div className="collapseTitle">
+            <div>
+                <div className="collapseTitle" onClick={toggleCollapse}>
                     {capitalize(sectionName)}
                     <button className={`collapseButton ${(isCollapsed)? "" : "collapseButtonUp"}`}></button>
                 </div>
