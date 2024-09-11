@@ -26,6 +26,18 @@ const experienceList = [
             "• Used MuleSoft to Design, Develop, and Deploy multiple APIs enabling new features in Latin America regions for a telecom industry leader."
         ]
     },
+    {
+        "organisation": "Capgemini",
+        "role": "Software Engineering Intern",
+        "period": "Mar 2022 – Jun 2022",
+        "location": "Remote",
+        "achivements": [
+            "Engaged in the conceptualization and execution of POCs in the following technologies:",
+            "• Java 8 / JEE, Hibernate",
+            "• Spring MVC, Spring Boot, MuleSoft (Rest APIs)",
+            "• AWS, Docker, Git (Cloud concepts)"
+        ]
+    },
 ]
 
 const education = {
@@ -63,7 +75,7 @@ export default function Data(){
         },
         "summary": useStateAsObject(
             `Versatile Full Stack Developer with expertise in Java, React, and integration technologies. 
-            Also skilled in JavaScript and Python, demonstrating adaptability across various frameworks and platforms.`
+Also skilled in JavaScript and Python, demonstrating adaptability across various frameworks and platforms.`
         ),
         "skills": useStateAsObject(skillsList),
         "experience": useStateAsObject(experienceList),

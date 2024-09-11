@@ -2,17 +2,146 @@
     flex: 3;
     background-color: #939185;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .tooBar{
     display: flex;
     justify-content: center;
     background-color: #2F3645;
-    height: 8vh;
+    height: 10vh;
 }
 
 .tool{
     margin: auto;
+    height: 2em;
+    min-width: 7vw;
+    background-color: #C4DAD2;
+    border-radius: 10px;
+    border: solid#72807b;
 }
-    
+.tool:hover{
+    background-color: #5f90bb;
+}
+
+.collapseTitle{
+    min-height: 8vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapseButton{
+    width: 5vh;
+    height: 5vh;
+    background-color: transparent;
+    border: none;
+    background-image: url('/src/assets/arrowDown.svg');
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+.collapseButtonUp{
+    transform: rotate(180deg);
+}
+
+.collapsedContent{
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Input Feilds */
+input{
+    width: 100%;
+    height: 2em;
+    border-radius: 5px;
+    border: 2px;
+    margin: 3px 0 6px;
+    padding: 0 5px 0 5px;
+    box-sizing: border-box;
+}
+
+.halfInput{
+    width: 40%;
+}
+
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px;
+    margin: 3px 0 6px;
+    padding: 0 5px 0 5px;
+    overflow: auto;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Minimal Scrollbar in textaread */
+textarea::-webkit-scrollbar {
+width: 6px;  /* Thin scrollbar */
+}
+
+textarea::-webkit-scrollbar-thumb {
+background-color: rgb(182, 182, 182);  /* Scrollbar color */
+border-radius: 10px;  /* Rounded corners */
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+background-color: #8a8a8a;  /* Darken on hover */
+}
+
+.twoLineInput{
+    height: 3em;
+    min-height: 2em;
+}
+
+.threeLineInput{
+    height: 9em;
+    min-height: 6em;
+}
+
+/* Buttons */
+.deletableFeild{
+    position: relative;  /* Establishes a positioning context for the button */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteButton{
+    background-image: url(/src/assets/delete.svg);
+    background-position: center;
+    background-size: cover;
+    background-color: red;
+    position: absolute;
+    left: -10px;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    border: none;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.deletableFeild:hover .deleteButton{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.deleteButton:hover{
+    background-color: rgb(219, 0, 0);
+}
+
+.addNewButton{
+    height: 2.5em;
+    background-color: #80c3fe;
+    border-radius: 10px;
+    border: solid rgb(88, 141, 202) 2px;
+}

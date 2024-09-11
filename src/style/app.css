@@ -10,3 +10,73 @@ body{
 .centeredText{
   text-align: center;
 }
+
+.textAlightLeft{
+  text-align: left;
+}
+
+.aboutPageBackgroud{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.aboutPage{
+  position: relative;
+  background-color: aliceblue;
+  text-align: center;
+  width: 80vw;
+  margin: 10vh auto;
+  padding: 5vw 10vw 5vw 10vw;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.centeredItems{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.crossButton{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  background-image: url("/src/assets/cross.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.circularButton{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: none;
+}
+
+.linkedinButton{
+  background-image: url(/src/assets/linkedin.svg);
+  background-position: center;
+  background-size: cover;
+  margin: 0 10px 0 10px;
+}
+
+.githubButton{
+  background-image: url(/src/assets/github.svg);
+  background-position: center;
+  background-size: cover;
+}

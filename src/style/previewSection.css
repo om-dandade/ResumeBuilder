@@ -21,9 +21,47 @@
 
 .contentText{
     font-size: small;
+    white-space: pre-wrap;
 }
 
 .separator {
     border-top: 1px solid #000;
     margin: 10px 0; 
+}
+
+.resumeContent{
+    display: flex;
+}
+
+.resumeLeft{
+    flex: 4;
+    background-color: aliceblue;
+    padding: 0 1vw 0 1vw;
+    text-align: left;
+}
+
+.resumeRight{
+    flex: 6;
+    padding: 0 1vw 0 1vw;
+}
+
+.companyName{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 1em;
+}
+
+.companyName p{
+    color: rgb(0, 0, 255);
+}
+
+.date{
+    margin: 5px 0 10px;
+    font-size: smaller;
+    color: rgb(182, 160, 0);
+}
+
+.emptyLine{
+    height: 2em;
 }

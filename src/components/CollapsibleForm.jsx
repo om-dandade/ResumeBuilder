@@ -1,5 +1,6 @@
 import { useState } from "react";
 import getSectionComponent from './Forms'
+import { capitalize } from "./utils";
 
 //Generic Collapsable component with socket for custom form
 export default function ColapcableForm({sectionName, sectionData, sectionRef}){
@@ -10,11 +11,19 @@ export default function ColapcableForm({sectionName, sectionData, sectionRef}){
         }
         setIsCollapsed(!isCollapsed);
     }
+
     return(
-        <div>
-            {sectionName}
-            <button onClick={toggleCollapse}>{isCollapsed? "expand": "collapse"}</button>
-            {!isCollapsed && getSectionComponent(sectionName, sectionData)}
-        </div>
+        <>
+            <div onClick={toggleCollapse}>
+                <div className="collapseTitle">
+                    {capitalize(sectionName)}
+                    <button className={`collapseButton ${(isCollapsed)? "" : "collapseButtonUp"}`}></button>
+                </div>
+                <div className="collapsedContent">
+                    {!isCollapsed && getSectionComponent(sectionName, sectionData)}
+                </div>
+            </div>
+            <div className="separator"></div>
+        </>
     )
 }
