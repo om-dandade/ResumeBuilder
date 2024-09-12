@@ -47,6 +47,7 @@ function AboutPage({isAboutClosed, setAboutClosed}){
                     <button className="circularButton linkedinButton" onClick={() => window.open("https://www.linkedin.com/in/om-dandade/", "_blank")}></button>
                     <button className="circularButton githubButton" onClick={() => window.open("https://github.com/om-dandade", "_blank")}></button>
                 </div>
+                <p className="date">Version v1.0.1</p>
             </div>
         </div>
     )
